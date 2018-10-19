@@ -7,7 +7,7 @@ Play a video on mouse enter, pause on mouse out
 Just download `jquery.hoverplay.js` or `jquery.hoverplay.min.js` and add it to your HTML file:
 
 ```html
-	<script type="text/javascript" src="js/jquery.hoverplay.min.js"></script>
+<script type="text/javascript" src="js/jquery.hoverplay.min.js"></script>
 ```
 
 ## Basic usage
@@ -23,16 +23,16 @@ That's it.
 Call `hoverPlay` on your selected elements:
 
 ```javascript
-	$('#video').hoverPlay();
+$('#video').hoverPlay();
 ```
 
 You may also pass an options object:
 
 ```javascript
-	$('#video').hoverPlay({
-		playDelay: 500,
-		pauseDelay: 100
-	});
+$('#video').hoverPlay({
+	playDelay: 500,
+	pauseDelay: 100
+});
 ```
 
 ## Advanced usage
@@ -40,18 +40,18 @@ You may also pass an options object:
 You may override the default callbacks if you'd like to add/remove a class or perform additional DOM manipulation:
 
 ```javascript
-	$.extend(true, $.hoverPlay.defaults, {
-		callbacks: {
-			play: function(el,  video) {
-				video.play();
-				el.addClass('hoverPlay');
-			},
-			pause: function(el,  video) {
-				video.pause();
-				el.removeClass('hoverPlay');
-			}
+$.extend(true, $.hoverPlay.defaults, {
+	callbacks: {
+		play: function(el,  video) {
+			video.play();
+			el.addClass('hoverPlay');
+		},
+		pause: function(el,  video) {
+			video.pause();
+			el.removeClass('hoverPlay');
 		}
-	});
+	}
+});
 ```
 
 ## Requirements
