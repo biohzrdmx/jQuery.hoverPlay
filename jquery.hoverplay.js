@@ -1,6 +1,6 @@
 /**
  * jQuery.hoverPlay
- * @version   1.0
+ * @version   1.1
  * @author    biohzrdmx <github.com/biohzrdmx>
  * @requires  jQuery 1.8+
  * @license   MIT
@@ -37,6 +37,8 @@
 						opts.callbacks.pause(el, video);
 						el.trigger('hoverPause');
 					},  opts.pauseDelay);
+				}).on('click', function(e) {
+					return opts.callbacks.click(el, video, e);
 				});
 			}
 		});
@@ -51,6 +53,9 @@
 			},
 			pause: function(el,  video) {
 				video.pause();
+			},
+			click: function(el, video, e) {
+				e.preventDefault();
 			}
 		}
 	};
